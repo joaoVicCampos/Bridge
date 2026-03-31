@@ -10,5 +10,12 @@ public class Main {
 
         simples.enviar("Relatório mensal pronto.");
         urgente.enviar("Servidor principal fora do ar!");
+
+        Coordenador coordenador = new Coordenador();
+        coordenador.adicionar(simples);
+        coordenador.adicionar(urgente);
+
+        System.out.println("--- Enviando via Coordenador ---");
+        coordenador.enviarTodas("Aviso: manutenção programada às 22h.");
     }
 }
